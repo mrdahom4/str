@@ -26,15 +26,15 @@ client.on('ready', () => {
   console.log('')
 });
 
-client.on('guildMemberAdd', member => {
-  member.guild.fetchInvites().then(guildInvites => {
-    const ei = invites[member.guild.id];
-    invites[member.guild.id] = guildInvites;
-    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
-    const inviter = client.users.get(invite.inviter.id);
-    const logChannel = member.guild.channels.find(channel => channel.name === "simo");
-    logChannel.send(`Invited by: <@${inviter.id}>`);
-  });
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Bot- Script By : DaHoM`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : DaHoM ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`iLove Simo`,"http://twitch.tv/S-F")
+client.user.setStatus("dnd")
 });
 
 client.login(process.env.BOT_TOKEN);
