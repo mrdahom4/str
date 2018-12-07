@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "!"
+
 
 
 client.on('ready', () => {
@@ -28,7 +28,7 @@ client.on('ready', () => {
   console.log('')
 });
 
-var prefix = "!"
+
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Bot- Script By : DaHoM`);
@@ -42,7 +42,7 @@ client.user.setStatus("dnd")
 
 client.on("message", message => {
 
-            if (message.content.startsWith(prefix + "bc")) {
+            if (message.content.startsWith("bc")) {
                          if (!message.member.hasPermission("MANAGE ROLES"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
