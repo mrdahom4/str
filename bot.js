@@ -28,6 +28,7 @@ client.on('ready', () => {
   console.log('')
 });
 
+var prefix = "!"
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Bot- Script By : DaHoM`);
